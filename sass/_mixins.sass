@@ -11,3 +11,24 @@
 =transition($content)
 	+prefix('transition',$content)
 
+=flexbox
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+
+=order($num)
+	-webkit-box-ordinal-group: $num
+	-moz-box-ordinal-group: $num
+	-ms-flex-order: $num
+	-webkit-order: $num
+	order: $num
+
+=flex-width($num: 1, $prctWidth: 20%)
+	-webkit-box-flex: $num
+	-moz-box-flex: $num
+	width: $prctWidth
+	-webkit-flex: $num
+	-ms-flex: $num
+	flex: $num
