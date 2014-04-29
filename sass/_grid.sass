@@ -1,0 +1,17 @@
+.row
+    &:after
+        clear: both
+        content: ""
+        display: table
+    >*
+        float: left
+    
+$columns: 12    
+
+@for $i from 1 through $columns
+    .col-#{$i}
+        width: percentage(1 / $columns * $i)
+            
+@for $i from 1 through $columns
+    .col-push-#{$i}
+        margin-left: percentage(1 / $columns * $i)

@@ -1,0 +1,148 @@
+@import variables
+@import reset
+@import mixins
+@import grid
+@import form
+
+=headingType
+    font-family: $headingFont
+    font-weight: 400
+    
+=thinType
+    font-family: $thinFont
+    font-weight: 100
+        
+=bodyType
+    font-family: $bodyFont
+    font-weight: 400
+    
+=optimizeLegibility
+    text-rendering: optimizeLegibility    
+    -webkit-font-smoothing: antialiased
+    
+a,div,p,span
+    +bodyType
+
+a
+    text-decoration: none
+    color: lighten($secondary, 10%)
+    
+h1,h2,h3,h4,h5,h6
+    +headingType
+    
+h1
+    font-size: 16pt
+h2 
+    font-size: 14pt
+    
+.text-center
+    text-align: center
+    
+.brand
+    +headingType
+    text-transform: uppercase
+    padding: 0.1em
+    margin-right: 2em
+    img
+        vertical-align: middle
+        height: 40px
+        padding-bottom: 5px
+        margin-right: 0.2em   
+    &:hover
+        text-decoration: none
+.nav
+    padding: 0.5em 
+    .brand
+        font-size: 16pt
+    a
+        +transition(border-color 250ms ease)
+        color: $primary
+        +headingType
+        font-size: 10pt
+        text-decoration: none
+        text-transform: uppercase
+        padding: 0 1em       
+        &:not(.brand)
+            border-bottom: 3px solid invert($primary)
+        &:hover:not(.brand)
+            border-bottom-color: $primary
+                
+        &.bordered
+            +transition(all 250ms ease)
+            color: white
+            border-radius: $borderRadius
+            background: $primary
+            padding-top: 0.5em
+            padding-bottom: 0.5em
+            &:hover, &:active
+                border-bottom: 0
+                text-decoration: none
+                background-color: lighten($primary, 25%)
+
+    .items
+        display: inline-block
+        text-align: right
+        
+.content
+    >section
+        padding: $gutter
+footer
+    padding: $gutter
+            
+.banner
+    padding-left: 20px
+    height: 400px
+    display: flex
+    background-image: url('/img/banner.jpg')
+    background-size: cover
+    background-position: center center
+    color: white
+    +text-shadow(0 0 10px rgba(0,0,0,0.5))
+    >div
+        margin: auto 0
+        width: 50%
+        h1
+            font-size: 18pt
+        .get-started
+            margin-top: 1.5em
+            a
+                +transition(background 250ms ease)
+                color: white
+                border: 1px solid white
+                border-radius: $borderRadius
+                padding: 0.5em 1em
+                &:hover
+                    background-color: rgba(255,255,255,0.2)
+                        
+.learn-more
+    background: $secondary
+    color: white
+    .header
+        margin-top: 0
+        font-size: 18pt
+            
+.pricing
+    background: darken(white, 10%)
+    .header
+        margin-top: 0
+        font-size: 18pt
+            
+.sign-up
+    background: $highlight
+    color: white
+    .header
+        margin-top: 0
+        font-size: 18pt
+            
+.contact
+    .header
+        margin-top: 0
+        font-size: 18pt
+            
+footer
+    background: $primary
+    color: white
+    a
+        color: white
+    
+        

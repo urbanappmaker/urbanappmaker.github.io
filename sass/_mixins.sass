@@ -1,0 +1,13 @@
+=prefix($name,$style)
+	-o-#{$name}: $style
+	-ms-#{$name}: $style
+	-moz-#{$name}: $style
+	-webkit-#{$name}: $style
+	#{$name}: $style
+=text-shadow($content)
+	+prefix('text-shadow',$content)
+=box-shadow($content)
+	+prefix('box-shadow',$content)
+=transition($content)
+	+prefix('transition',$content)
+
